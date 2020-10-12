@@ -1,8 +1,9 @@
 import React from 'react'
 import './custom.scss'
 
+import { AddNewVacations } from './pages/AddNewVacation'
+import { Header } from './components/Header'
+
 export function App() {
-  return (
-    <div className="d-flex justify-content-center display-2">Hello, World!</div>
-  )
+  return <p>App</p>
 }
