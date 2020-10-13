@@ -5,16 +5,12 @@ import './custom.scss'
 import { AddNewVacation } from './pages/AddNewVacation'
 import { Header } from './components/Header'
 import { NavBar } from './components/NavBar'
+import { Footer } from './components/Footer'
 
 export function App() {
   return (
     <>
       <NavBar />
-      {/* <header>
-        <ul>
-          <li> Welcome Back, userNameSpace!</li>
-        </ul>
-      </header> */}
       <Switch>
         <Route exact path="/">
           <Header />

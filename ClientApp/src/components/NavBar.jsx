@@ -14,9 +14,9 @@ export function NavBar() {
         </div>
 
         <div className="navItems">
-          <a href="#add_new_vacation">New Vacation</a>
-          <a href="#user_account_page">My Account</a>
-          <a href="#upcoming_vacation">My Upcoming Vacations</a>
+          <a href="/add_new_vacation">New Vacation</a>
+          <a href="/user_account_page">My Account</a>
+          <a href="/upcoming_vacation">My Upcoming Vacations</a>
         </div>
       </nav>
     </>

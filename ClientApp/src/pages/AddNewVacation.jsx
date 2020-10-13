@@ -27,70 +27,63 @@ export function AddNewVacation() {
           <input type="int" className="form-control" id="budgetForOverall" />
         </div>
 
-        {/* I need to find out how to make this a clickable dropdown */}
-        <div className="dropdown">
-          <button className="dropdown">How do you plan to travel?</button>
-          <div className="dropdown-content">
-            <li>Plane</li>
-            <li>Car</li>
+        <select name="travelMethod" id="travelMethod">
+          <option value="Plane">Plane</option>
+          <option value="Car">Car</option>
+        </select>
+
+        <div className="form-group">
+          <label htmlFor="budgetForTravel">Budget for your travel?</label>
+          <input type="int" className="form-control" id="budgetForTravel" />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="travelParty">How many people in your party?</label>
+          <input type="int" className="form-control" id="travelParty" />
+        </div>
+
+      <select name="accommodationsMethod" id="accommodationsMethod">
+        <option value="Hotel">Hotel</option>
+        <option value="Condo Rental">Condo Rental</option>
+        <option value="Other">Other</option>
+      </select>
+
+          <div className="form-group">
+            <label htmlFor="budgetForAccommodations">
+              Budget for Accommodations
+            </label>
+            <input
+              type="int"
+              className="form-control"
+              id="budgetForAccommodations"
+            />
           </div>
 
           <div className="form-group">
-            <label htmlFor="budgetForTravel">Budget for your travel?</label>
-            <input type="int" className="form-control" id="budgetForTravel" />
+            <label htmlFor="budgetForActivities">Budget for Activities</label>
+            <input
+              type="int"
+              className="form-control"
+              id="budgetForActivities"
+            />
           </div>
 
           <div className="form-group">
-            <label htmlFor="travelParty">How many people in your party?</label>
-            <input type="int" className="form-control" id="travelParty" />
+            <label htmlFor="notesNewVacation">Notes</label>
+            <textarea
+              // @ts-ignore
+              type="text"
+              className="form-control"
+              id="notesNewVacation"
+            />
+            <small id="descriptionHelp" className="form-text text-muted">
+              Special notes for yourself when looking back at this vacation!
+            </small>
           </div>
 
-          {/* I need to find out how to make this a clickable dropdown */}
-          <div className="dropdown">
-            <button className="dropdown">Where do you plan to stay?</button>
-            <div className="dropdown-content">
-              <li>Hotel</li>
-              <li>Rent Condo</li>
-              <li>Other</li>
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="budgetForAccommodations">
-                Budget for Accommodations
-              </label>
-              <input
-                type="int"
-                className="form-control"
-                id="budgetForAccommodations"
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="budgetForActivities">Budget for Activities</label>
-              <input
-                type="int"
-                className="form-control"
-                id="budgetForActivities"
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="notesNewVacation">Notes</label>
-              <textarea
-                // @ts-ignore
-                type="text"
-                className="form-control"
-                id="notesNewVacation"
-              />
-              <small id="descriptionHelp" className="form-text text-muted">
-                Special notes for yourself when looking back at this vacation!
-              </small>
-            </div>
-
-            <button type="submit" className="btn btn-primary">
-              Submit
-            </button>
-          </div>
+          <button type="submit" className="btn btn-primary">
+            Submit
+          </button>
         </div>
       </form>
     </div>
