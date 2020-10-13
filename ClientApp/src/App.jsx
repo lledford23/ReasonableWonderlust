@@ -19,6 +19,7 @@ export function App() {
           <AddNewVacation />
         </Route>
       </Switch>
+      <Footer />
     </>
   )
 }
