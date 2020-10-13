@@ -27,7 +27,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  border: solid 1px red;
+  border: solid 1px lightgrey;
 
   position: sticky;
   top: 0;
@@ -44,7 +44,7 @@ body {
   }
 
   .navItems {
-    border: solid 1px blue;
+    border: solid 1px lightgrey;
     width: 100%;
     display: flex;
     justify-content: space-around;
