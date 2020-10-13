@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 export function NavBar() {
   return (
     <>
-      <div className="topnav">
+      <div className="topNav">
         <nav className="navbar navbar-expand-lg">
           <a className="active" href="#home">
             Home
@@ -15,7 +15,7 @@ export function NavBar() {
       </div>
 
       <main>
-        <div className="userinfo">Welcome Back, userNameSpace!</div>
+        <div className="userInfo">Welcome Back, userNameSpace!</div>
       </main>
     </>
   )
