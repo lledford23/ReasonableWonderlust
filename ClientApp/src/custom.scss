@@ -15,7 +15,7 @@ html {
 
 body {
   line-height: 1.7;
-  color: rgba(0, 0, 0, 0.5);
+  color: $darkblue;
   font-weight: 400;
   font-size: 1rem;
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
@@ -23,9 +23,6 @@ body {
   font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-
-  // background-image: url(images/dino-reichmuth-A5rCN8626Ck-unsplash.jpg);
-  // background-repeat: no-repeat;
 }
 
 .topNav {
@@ -66,17 +63,25 @@ body {
     display: flex;
     align-items: center;
   }
+}
 
-  .landingpage {
-    color: $darkblue;
-  }
+h1 {
+  display: flex;
+  align-items: center;
+}
 
-  .form-group {
-    color: $darkblue;
-  }
+.form-group {
+  color: $darkblue;
+}
 
-  .userInfo {
-    display: flex;
-    align-items: right;
-  }
+.userInfo {
+  display: flex;
+  align-items: right;
+}
+
+.loginpage {
+  background-image: url('https://dogtime.com/assets/uploads/2018/10/puppies-cover.jpg');
+  background-color: red;
+  // background-image: url('./images/backgroundpic.jpg');
+  // background-size: contain;
 }

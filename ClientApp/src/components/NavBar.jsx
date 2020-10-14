@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 // @ts-ignore
-import logo from '../images/logoWL.PNG'
+import logo from '../images/logoWL.png'
 
 export function NavBar() {
   return (
