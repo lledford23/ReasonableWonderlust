@@ -26,8 +26,6 @@ export function App() {
           <ShowUpcomingVacations />
         </Route>
       </Switch>
-
-      <Footer />
     </>
   )
 }
