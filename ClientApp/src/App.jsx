@@ -19,7 +19,7 @@ export function App() {
         <Route exact path="/add_new_vacation">
           <AddNewVacation />
         </Route>
-        <Route exact path="/upcoming_vacations">
+        <Route exact path="/vacations">
           <ShowUpcomingVacations />
         </Route>
       </Switch>
