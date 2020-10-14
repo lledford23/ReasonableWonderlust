@@ -7,6 +7,7 @@ import { ShowUpcomingVacations } from './pages/ShowUpcomingVacations'
 import { Header } from './components/Header'
 import { NavBar } from './components/NavBar'
 import { Footer } from './components/Footer'
+import { LandingPage } from './pages/LandingPage'
 
 export function App() {
   return (
@@ -23,6 +24,7 @@ export function App() {
           <ShowUpcomingVacations />
         </Route>
       </Switch>
+      <LandingPage />
 
       <Footer />
     </>
