@@ -1,0 +1,12 @@
+@import 'bootstrap';
+//helpers
+@import './helpers/variables';
+@import './helpers/basics';
+// components
+@import './components/navbar';
+@import './components/footer';
+
+// pages
+@import './pages/loginpage';
+@import './pages/addnewvacation';
+//

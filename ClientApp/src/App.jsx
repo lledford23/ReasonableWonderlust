@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-import './custom.scss'
+import './Styles/custom.scss'
 
 import { AddNewVacation } from './pages/AddNewVacation'
 import { ShowUpcomingVacations } from './pages/ShowUpcomingVacations'
