@@ -46,34 +46,37 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 4000px;
   }
-}
-.navItems {
-  border: solid 1px lightgrey;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-}
+  img {
+    width: 400px;
+  }
 
-.topNav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  .navItems {
+    border: solid 1px lightgrey;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
 
-  display: flex;
-  align-items: center;
-}
+  .topNav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 
-.landingpage {
-  color: $darkblue;
-}
+    display: flex;
+    align-items: center;
+  }
 
-.form-group {
-  color: $darkblue;
-}
+  .landingpage {
+    color: $darkblue;
+  }
 
-.userInfo {
-  display: flex;
-  align-items: right;
+  .form-group {
+    color: $darkblue;
+  }
+
+  .userInfo {
+    display: flex;
+    align-items: right;
+  }
 }
