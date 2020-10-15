@@ -13,7 +13,7 @@ export function App() {
   return (
     <>
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/LoginPage">
           <LoginPage />
         </Route>
         <Route exact path="/LandingPage">

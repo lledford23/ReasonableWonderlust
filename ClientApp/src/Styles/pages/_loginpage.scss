@@ -2,4 +2,22 @@
   background-image: url('../../images/backgroundpic.jpg');
   background-size: cover;
   min-height: 100vh;
+
+  h1 {
+    align-items: center;
+    margin: auto;
+    display: flex;
+    display: grid;
+  }
+
+  .side-buttons {
+    display: flex;
+    width: 50vh;
+
+    padding-left: px;
+
+    .login-button {
+      margin-right: 20px;
+    }
+  }
 }

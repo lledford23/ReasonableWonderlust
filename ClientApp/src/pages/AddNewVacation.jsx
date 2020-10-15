@@ -37,12 +37,11 @@ export function AddNewVacation() {
               />
             </div>
 
-            <select name="travelMethod" id="travelMethod">
-              <option value="What's your travel method?">
-                What's your travel method?
-              </option>
+            <select className="travelMethod" id="travelMethod">
+              <option selected>What's your travel method?</option>
               <option value="Plane">Plane</option>
               <option value="Car">Car</option>
+              <option value="Other">Other</option>
             </select>
 
             <div className="form-group">

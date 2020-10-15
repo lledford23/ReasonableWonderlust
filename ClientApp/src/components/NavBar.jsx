@@ -6,12 +6,11 @@ import logo from '../images/logoWL.png'
 export function NavBar() {
   return (
     <>
-      <nav className="topNav">
+      <nav className="topNav navbar-light">
         <div className="logo">
-          <Link className="navbar-brand" to="#">
+          <a className="navbar-brand" href="/user_account_page">
             <img src={logo} className="logo-1" role="img" aria-label="logo" />
-          </Link>
-          <div className="userInfo">Welcome Back, userNameSpace!</div>
+          </a>
         </div>
 
         <div className="navItems">
