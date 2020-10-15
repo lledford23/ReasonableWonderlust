@@ -12,9 +12,7 @@
 
   .side-buttons {
     display: flex;
-    width: 50vh;
-
-    padding-left: px;
+    justify-content: space-around;
 
     .login-button {
       margin-right: 20px;
