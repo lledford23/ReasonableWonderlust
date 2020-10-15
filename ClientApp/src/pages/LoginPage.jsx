@@ -6,6 +6,7 @@ export function LoginPage() {
       <section className="login-page">
         <h1>Where will you wander next?</h1>
         <div className="side-buttons">
+          <Link to
           <button className="login-button">Login</button>
           <button>Sign Up</button>
         </div>

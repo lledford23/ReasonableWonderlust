@@ -8,15 +8,15 @@ export function NavBar() {
     <>
       <nav className="topNav navbar-light">
         <div className="logo">
-          <a className="navbar-brand" href="/user_account_page">
+          <Link className="navbar-brand" to="/user_account_page">
             <img src={logo} className="logo-1" role="img" aria-label="logo" />
-          </a>
+          </Link>
         </div>
 
         <div className="navItems">
-          <a href="/add_new_vacation">New Vacation</a>
-          <a href="/user_account_page">My Account</a>
-          <a href="/vacations/:id">My Upcoming Vacations</a>
+          <Link to="/add_new_vacation">New Vacation</Link>
+          <Link to="/user_account_page">My Account</Link>
+          <Link to="/vacations">My Upcoming Vacations</Link>
         </div>
       </nav>
     </>

@@ -16,15 +16,19 @@ export function App() {
         <Route exact path="/LoginPage">
           <LoginPage />
         </Route>
+        <Route exact path="/">
+          <LoginPage />
+        </Route>
         <Route exact path="/LandingPage">
           <LandingPage />
         </Route>
         <Route exact path="/add_new_vacation">
           <AddNewVacation />
         </Route>
-        <Route exact path="/vacations/:id">
+        <Route exact path="/vacations">
           <ShowUpcomingVacations />
         </Route>
+        {/* Add route that shows single vacation  */}
       </Switch>
     </>
   )
