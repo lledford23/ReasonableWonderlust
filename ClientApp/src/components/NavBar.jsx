@@ -14,9 +14,21 @@ export function NavBar() {
         </div>
 
         <div className="navItems">
-          <Link to="/add_new_vacation">New Vacation</Link>
-          <Link to="/user_account_page">My Account</Link>
-          <Link to="/vacations">My Upcoming Vacations</Link>
+          <Link to="/add_new_vacation">
+            <button type="button" className="btn btn-info">
+              New Vacation
+            </button>
+          </Link>
+          <Link to="/user_account_page">
+            <button type="button" className="btn btn-info">
+              My Account
+            </button>
+          </Link>
+          <Link to="/vacations">
+            <button type="button" className="btn btn-info">
+              Upcoming Vacations
+            </button>
+          </Link>
         </div>
       </nav>
     </>

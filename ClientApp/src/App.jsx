@@ -10,6 +10,7 @@ import { LandingPage } from './pages/LandingPage'
 import { LoginPage } from './pages/LoginPage'
 import { LoginRoutePage } from './pages/LoginRoutePage'
 import { SignUpPage } from './pages/SignUpPage'
+// import { ShowVacation } from './pages/ShowVacation'
 
 export function App() {
   return (
@@ -36,7 +37,9 @@ export function App() {
         <Route exact path="/vacations">
           <ShowUpcomingVacations />
         </Route>
-        {/* Add route that shows single vacation  */}
+        {/* <Route exact path="/vacations/:id">
+          <ShowVacation/>
+        </Route> */}
       </Switch>
     </>
   )

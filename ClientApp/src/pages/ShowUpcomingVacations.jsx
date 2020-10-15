@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import { NavBar } from '../components/NavBar'
 
 export function ShowUpcomingVacations() {
   const { id } = useParams()
@@ -35,6 +36,7 @@ export function ShowUpcomingVacations() {
 
   return (
     <>
+      <NavBar />
       <header>Upcoming Vacations</header>
 
       {vacations.map((vacation) => (
