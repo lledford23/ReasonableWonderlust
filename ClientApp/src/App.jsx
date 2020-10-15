@@ -8,6 +8,7 @@ import { NavBar } from './components/NavBar'
 import { Footer } from './components/Footer'
 import { LandingPage } from './pages/LandingPage'
 import { LoginPage } from './pages/LoginPage'
+import { LoginRoutePage } from './pages/LoginRoutePage'
 
 export function App() {
   return (
@@ -18,6 +19,9 @@ export function App() {
         </Route>
         <Route exact path="/">
           <LoginPage />
+        </Route>
+        <Route exact path="/LoginRoutePage">
+          <LoginRoutePage />
         </Route>
         <Route exact path="/LandingPage">
           <LandingPage />

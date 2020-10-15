@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export function LoginPage() {
   return (
@@ -6,8 +7,9 @@ export function LoginPage() {
       <section className="login-page">
         <h1>Where will you wander next?</h1>
         <div className="side-buttons">
-          <Link to
-          <button className="login-button">Login</button>
+          <Link to="/LoginRoutePage">
+            <button className="login-button">Login</button>
+          </Link>
           <button>Sign Up</button>
         </div>
       </section>
