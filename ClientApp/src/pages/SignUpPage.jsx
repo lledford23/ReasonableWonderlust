@@ -1,54 +1,43 @@
 import React from 'react'
 
-export function SignUpPage(){
-  return(
+export function SignUpPage() {
+  return (
     <>
-<form>
-  <div className="form-row">
-    <div className="form-group col-md-6">
-      <label input="inputEmail4">Email</label>
-      <input type="email" className="form-control" id="inputEmail4">
-    </div>
-    <div className="form-group col-md-6">
-      <label for="inputPassword4">Password</label>
-      <input type="password" className="form-control" id="inputPassword4">
-    </div>
-  </div>
-  <div className="form-group">
-    <label for="inputAddress">Address</label>
-    <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St">
-  </div>
-  <div className="form-group">
-    <label for="inputAddress2">Address 2</label>
-    <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-  </div>
-  <div className="form-row">
-    <div className="form-group col-md-6">
-      <label for="inputCity">City</label>
-      <input type="text" className="form-control" id="inputCity">
-    </div>
-    <div className="form-group col-md-4">
-      <label for="inputState">State</label>
-      <select id="inputState" className="form-control">
-        <option selected>Choose...</option>
-        <option>...</option>
-      </select>
-    </div>
-    <div className="form-group col-md-2">
-      <label for="inputZip">Zip</label>
-      <input type="text" className="form-control" id="inputZip">
-    </div>
-  </div>
-  <div className="form-group">
-    <div className="form-check">
-      <input className="form-check-input" type="checkbox" id="gridCheck">
-      <label className="form-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
-  </div>
-  <button type="submit" className="btn btn-primary">Sign in</button>
-</form>
-</>
+      <form>
+        <div className="form-group">
+          <label id="text">Email address</label>
+          <input
+            type="email"
+            className="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          ></input>
+          <small id="emailHelp" className="form-text text-muted">
+            We'll never share your email with anyone else.
+          </small>
+        </div>
+        <div className="form-group">
+          <label input="emailInputPassword">Password</label>
+          <input
+            type="password"
+            className="form-control"
+            id="exampleInputPassword1"
+          ></input>
+          <div className="form-group form-check">
+            <input
+              type="checkbox"
+              className="form-check-input"
+              id="exampleCheck1"
+            ></input>
+            <label className="form-check-label" for="exampleCheck1">
+              Check me out
+            </label>
+          </div>
+          <button type="submit" className="btn btn-primary">
+            Submit
+          </button>
+        </div>
+      </form>
+    </>
   )
 }

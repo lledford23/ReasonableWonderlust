@@ -9,6 +9,7 @@ import { Footer } from './components/Footer'
 import { LandingPage } from './pages/LandingPage'
 import { LoginPage } from './pages/LoginPage'
 import { LoginRoutePage } from './pages/LoginRoutePage'
+import { SignUpPage } from './pages/SignUpPage'
 
 export function App() {
   return (
@@ -25,6 +26,9 @@ export function App() {
         </Route>
         <Route exact path="/LandingPage">
           <LandingPage />
+        </Route>
+        <Route exact path="/SignUpPage">
+          <SignUpPage />
         </Route>
         <Route exact path="/add_new_vacation">
           <AddNewVacation />

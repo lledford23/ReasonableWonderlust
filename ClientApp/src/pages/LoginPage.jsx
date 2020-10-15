@@ -10,7 +10,9 @@ export function LoginPage() {
           <Link to="/LoginRoutePage">
             <button className="login-button">Login</button>
           </Link>
-          <button>Sign Up</button>
+          <Link to="/SignUpPage">
+            <button className="signup-button">Sign Up</button>
+          </Link>
         </div>
       </section>
 
