@@ -42,11 +42,13 @@ export function ShowUpcomingVacations() {
       {vacations.map((vacation) => (
         <div key={vacation.id}>
           <h2>
-            <Link to={`/vacations/${vacation.id}`}>
-              {vacation.beginDate} to {vacation.endDate}
-            </Link>
+            <Link to={`/vacations/${vacation.id}`}>{vacation.beginDate}</Link>
           </h2>
           <p>
+            <li>
+              Your vacation is set for dates: {vacation.beginDate} to{' '}
+              {vacation.endDate}
+            </li>
             <li>You have budgeted: {vacation.overallBudget}</li>
             <li>Your activities budget: {vacation.activitiesBudget}</li>
             <li>Your meal budget: {vacation.mealBudget}</li>

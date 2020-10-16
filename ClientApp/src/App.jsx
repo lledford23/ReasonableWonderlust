@@ -10,7 +10,8 @@ import { LandingPage } from './pages/LandingPage'
 import { LoginPage } from './pages/LoginPage'
 import { LoginRoutePage } from './pages/LoginRoutePage'
 import { SignUpPage } from './pages/SignUpPage'
-// import { ShowVacation } from './pages/ShowVacation'
+import { ShowVacation } from './pages/ShowVacation'
+import { ToDoList } from './pages/ToDoList'
 
 export function App() {
   return (
@@ -34,12 +35,15 @@ export function App() {
         <Route exact path="/add_new_vacation">
           <AddNewVacation />
         </Route>
+        <Route exact path="/ToDoList">
+          <ToDoList />
+        </Route>
         <Route exact path="/vacations">
           <ShowUpcomingVacations />
         </Route>
-        {/* <Route exact path="/vacations/:id">
-          <ShowVacation/>
-        </Route> */}
+        <Route exact path="/vacations/:id">
+          <ShowVacation />
+        </Route>
       </Switch>
     </>
   )

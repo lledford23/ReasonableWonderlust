@@ -19,9 +19,9 @@ export function NavBar() {
               New Vacation
             </button>
           </Link>
-          <Link to="/user_account_page">
+          <Link to="/ToDoList">
             <button type="button" className="btn btn-info">
-              My Account
+              To Do Lists
             </button>
           </Link>
           <Link to="/vacations">
