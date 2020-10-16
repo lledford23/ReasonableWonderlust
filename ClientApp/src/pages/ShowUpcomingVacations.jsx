@@ -8,9 +8,9 @@ export function ShowUpcomingVacations() {
   const [vacations, setVacations] = useState([
     {
       id: 0,
-      userName: 'Fake Name',
-      firstName: 'Fake',
-      lastName: 'Fake',
+      userName: '',
+      firstName: '',
+      lastName: '',
       beginDate: '',
       endDate: '',
       overallBudget: 0,
