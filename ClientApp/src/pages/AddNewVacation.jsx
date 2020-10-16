@@ -79,7 +79,6 @@ export function AddNewVacation() {
           <div className="form-group">
             <label htmlFor="notesNewVacation">Notes</label>
             <textarea
-              // @ts-ignore
               type="text"
               className="form-control"
               id="notesNewVacation"

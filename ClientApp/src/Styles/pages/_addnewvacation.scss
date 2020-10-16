@@ -4,12 +4,35 @@
   padding-right: 150px;
   padding-left: 150px;
 
-  border: 6px solid red;
+  border: 6px solid $darkblue;
   .form-group {
+    background-color: #dfebea;
     color: $darkblue;
 
-    // padding-bottom: 150px;
-    // padding-right: 150px;
-    // padding-left: 150px;
+    border: 1px solid red;
+
+    padding-bottom: 150px;
+    padding-left: 150px;
+  }
+
+  input[type='text'] {
+    width: 25rem;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+  input[type='int'] {
+    width: 25rem;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+  input[type='date'] {
+    width: 25rem;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
   }
 }
