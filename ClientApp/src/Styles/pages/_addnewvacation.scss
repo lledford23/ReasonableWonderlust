@@ -5,14 +5,26 @@
   padding-left: 150px;
 
   border: 6px solid $darkblue;
+
   .form-group {
     background-color: #dfebea;
     color: $darkblue;
 
-    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    padding-bottom: 150px;
-    padding-left: 150px;
+    padding: 8px;
+
+    border-radius: 5px;
+    input {
+      border: 1px solid $mediumblue;
+    }
+
+    select {
+      border-radius: 5px;
+      border: 1px solid $mediumblue;
+    }
   }
 
   input[type='text'] {

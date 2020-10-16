@@ -3,9 +3,13 @@
   background-size: cover;
   min-height: 100vh;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   h1 {
     align-items: center;
-    margin: auto;
     display: flex;
     display: grid;
   }
@@ -13,6 +17,11 @@
   .side-buttons {
     display: flex;
     justify-content: space-around;
+    border: 1px solid red;
+
+    button {
+      margin: 8px;
+    }
 
     .login-button {
       margin-right: 20px;
