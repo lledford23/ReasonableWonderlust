@@ -6,9 +6,6 @@ export function AddNewVacation() {
     <>
       <NavBar />
       <section className="add-new-vacation-form">
-        {/* <div className="card">
-          <div className="card-header">Add a New Vacation</div> */}
-
         <form>
           <div className="form-group">
             <label htmlFor="place">Place you are traveling to?</label>
@@ -96,7 +93,6 @@ export function AddNewVacation() {
             Submit
           </button>
         </form>
-        {/* </div> */}
       </section>
     </>
   )
