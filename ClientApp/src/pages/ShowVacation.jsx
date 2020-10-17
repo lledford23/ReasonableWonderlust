@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import format from 'date-fns/format'
 
 export function ShowVacation() {
   const { id } = useParams()
@@ -31,6 +32,8 @@ export function ShowVacation() {
 
     fetchVacation()
   }, [id])
+
+  const dataFormat = `EEEE, MMMM do, yyyy`
 
   return (
     <>

@@ -15,6 +15,7 @@ namespace ReasonableWonderlust.Models
 
         // Add database tables here
         public DbSet<Vacation> Vacations { get; set; }
+        public DbSet<VacationDetail> VacationDetails { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
