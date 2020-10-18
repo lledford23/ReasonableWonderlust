@@ -1,43 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export function LoginRoutePage() {
+  const [errorMessage, setErrorMessage] = useState()
+  const [user, setUser] = useState({
+    email: '',
+    password: '',
+  })
+
   return (
     <>
-      <form>
-        <div className="form-group">
-          <label id="text">Email address</label>
-          <input
-            type="email"
-            className="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-          ></input>
-          <small id="emailHelp" className="form-text text-muted">
-            We'll never share your email with anyone else.
-          </small>
+      <section className="login-page">
+        <h1>Where will you wander next?</h1>
+        <div className="side-buttons">
+          <Link to="/LoginPage">
+            <button type="button" className="btn btn-info">
+              Login
+            </button>
+          </Link>
+          <Link to="/SignUpPage">
+            <button type="button" className="btn btn-info">
+              Sign Up
+            </button>
+          </Link>
         </div>
-        <div className="form-group">
-          <label input="emailInputPassword">Password</label>
-          <input
-            type="password"
-            className="form-control"
-            id="exampleInputPassword1"
-          ></input>
-          <div className="form-group form-check">
-            <input
-              type="checkbox"
-              className="form-check-input"
-              id="exampleCheck1"
-            ></input>
-            <label className="form-check-label" for="exampleCheck1">
-              Check me out
-            </label>
-          </div>
-          <button type="submit" className="btn btn-primary">
-            Submit
-          </button>
-        </div>
-      </form>
+      </section>
     </>
   )
 }
