@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 import './Styles/custom.scss'
 
 import { AddNewVacation } from './pages/AddNewVacation'
-import { ShowUpcomingVacations } from './pages/ShowUpcomingVacations'
+import { ShowPastVacations } from './pages/ShowPastVacations'
 import { NavBar } from './components/NavBar'
 import { Footer } from './components/Footer'
 import { LandingPage } from './pages/LandingPage'
@@ -39,7 +39,7 @@ export function App() {
           <ToDoList />
         </Route>
         <Route exact path="/vacations">
-          <ShowUpcomingVacations />
+          <ShowPastVacations />
         </Route>
         <Route exact path="/vacations/:id">
           <ShowVacation />

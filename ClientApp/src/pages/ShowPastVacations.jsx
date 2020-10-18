@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { NavBar } from '../components/NavBar'
 
-export function ShowUpcomingVacations() {
+export function ShowPastVacations() {
   const { id } = useParams()
 
   const [vacations, setVacations] = useState([
@@ -37,7 +37,7 @@ export function ShowUpcomingVacations() {
   return (
     <>
       <NavBar />
-      <header>Upcoming Vacations</header>
+      <header>Past Vacations</header>
 
       {vacations.map((vacation) => (
         <div key={vacation.id}>
