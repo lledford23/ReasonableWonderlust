@@ -39,7 +39,7 @@ export function LoginPage() {
 
   return (
     <>
-      <main className="page">
+      <main className="login-page">
         <nav>
           <a href="/">
             <i className="fa fa-home"></i>
@@ -69,7 +69,9 @@ export function LoginPage() {
             />
           </p>
           <p>
-            <input type="submit" value="Submit" />
+            <button type="submit" className="btn btn-info">
+              Submit
+            </button>
           </p>
         </form>
       </main>

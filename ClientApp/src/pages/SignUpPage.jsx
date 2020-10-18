@@ -82,7 +82,9 @@ export function SignUpPage() {
             />
           </p>
           <p>
-            <input type="submit" value="Submit" />
+            <button type="submit" className="btn btn-info">
+              Sign Up
+            </button>
           </p>
         </form>
       </main>

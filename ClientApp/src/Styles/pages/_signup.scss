@@ -1,5 +1,5 @@
-.login-page {
-  background-image: url('../../images/headerBackground.jpg');
+.page {
+  background-image: url('../../images/balloonsignup.jpg');
   background-size: cover;
   min-height: 100vh;
 
@@ -9,12 +9,12 @@
   justify-content: center;
 
   h2 {
+    color: seashell;
     border: 1px solid red;
-
-    color: $darkblue;
   }
 
   .form-input {
+    color: seashell;
     border: 1px solid red;
 
     display: flex;

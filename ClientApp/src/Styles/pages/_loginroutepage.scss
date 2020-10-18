@@ -1,0 +1,43 @@
+.login-route {
+  background-image: url('../../images/backgroundpic.jpg');
+  background-size: cover;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: $mediumblue;
+    width: 50%;
+    height: 50%;
+    padding: 20px 5px;
+  }
+
+  .side-buttons {
+    display: flex;
+    justify-content: space-around;
+
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: $mediumblue;
+    width: 50%;
+    height: 50%;
+    padding: 20px 5px;
+
+    h1 {
+      align-items: center;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    button {
+      margin: 8px;
+    }
+  }
+}

@@ -10,7 +10,7 @@ export function LoginRoutePage() {
 
   return (
     <>
-      <section className="login-page">
+      <section className="login-route">
         <h1>Where will you wander next?</h1>
         <div className="side-buttons">
           <Link to="/LoginPage">
