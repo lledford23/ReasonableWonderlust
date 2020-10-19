@@ -8,16 +8,14 @@ export function ToDoList() {
       <div id="myToDo" className="header">
         <h2>My To Do List</h2>
         <input type="text" id="myInput" placeholder="Add New Item.." />
-        <span onclick="newElement()" className="btn btn-primary">
-          Add
-        </span>
+        <button className="btn btn-primary">Add</button>
       </div>
 
       <ul id="myList">
-        <li>Buy Flight</li>
-        <li>Pay Deposit</li>
-        <li>Book Hotel</li>
-        <li>Pack Bags</li>
+        <ol>Buy Flight</ol>
+        <ol>Pay Deposit</ol>
+        <ol>Book Hotel</ol>
+        <ol>Pack Bags</ol>
       </ul>
     </>
   )

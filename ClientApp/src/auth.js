@@ -28,6 +28,14 @@ export const getUser = () => {
   return auth.user
 }
 
+export const updateUserAuth = (updatedUser) => {
+  const auth = authFromStorage()
+  auth.user.fullName = updatedUser.fullName
+  auth.user.email = updatedUser.email
+  auth.user.photoURL = updatedUser.photoURL
+  recordAuthentication(auth)
+}
+
 export const logout = () => {
   localStorage.removeItem('auth')
 }

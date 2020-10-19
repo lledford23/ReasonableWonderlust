@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { recordAuthentication } from '../auth'
 
 export function LoginPage() {
-  const [errorMessage, setErrorMessage] = useState()
+  const [errorMessage, setErrorMessage] = useState('')
 
   const [user, setUser] = useState({
     email: '',
@@ -29,8 +29,11 @@ export function LoginPage() {
 
     const apiResponse = await response.json()
 
+    console.log(apiResponse)
+
     if (apiResponse.status === 400) {
-      setErrorMessage(Object.values(apiResponse.errors).join(' '))
+      setErrorMessage('error')
+      // setErrorMessage(Object.values(apiResponse.errors).join(' '))
     } else {
       recordAuthentication(apiResponse)
       window.location.assign('/LandingPage')

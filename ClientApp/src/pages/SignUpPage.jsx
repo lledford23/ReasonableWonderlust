@@ -1,16 +1,57 @@
 import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
+// import { useDropzone } from 'react-dropzone'
+import { authHeader } from '../auth'
 
 export function SignUpPage() {
   const history = useHistory()
 
-  const [errorMessage, setErrorMessage] = useState()
+  const [errorMessage, setErrorMessage] = useState('')
 
   const [newUser, setNewUser] = useState({
     fullName: '',
     email: '',
     password: '',
   })
+
+  const [isUploading, setIsUploading] = useState(false)
+
+  // async function onDropFile(acceptedFiles) {
+  //   const fileToUpload = acceptedFiles[0]
+  //   console.log(fileToUpload)
+
+  //   const formData = new FormData()
+  //   formData.append('file', fileToUpload)
+  //   try {
+  //     setIsUploading(true)
+  //     const response = await fetch('/api/Uploads', {
+  //       method: 'POST',
+  //       headers: {
+  //         ...authHeader(),
+  //       },
+  //       body: formData,
+  //     })
+  //     setIsUploading(false)
+  //     if (response.status === 200) {
+  //       const apiResponse = await response.json()
+  //       const url = apiResponse.url
+  //       setNewUser({ ...newUser, photoURL: url })
+  //     } else {
+  //       setErrorMessage('Unable to upload image')
+  //     }
+  //   } catch (error) {
+  //     console.debug(error)
+  //     setErrorMessage('Unable to upload image')
+  //     setIsUploading(false)
+  //   }
+  // }
+  // let dropZoneMessage = 'Drag a picture of the restaurant here to upload!'
+  // if (isUploading) {
+  //   dropZoneMessage = 'Uploading...'
+  // }
+  // if (isDragActive) {
+  //   dropZoneMessage = 'Drop the files here ...'
+  // }
 
   function handleStringFieldChange(event) {
     const value = event.target.value
@@ -35,9 +76,10 @@ export function SignUpPage() {
     console.log(apiResponse)
 
     if (apiResponse.status === 400) {
-      setErrorMessage(Object.values(apiResponse.errors).join(' '))
+      // setErrorMessage(Object.values(apiResponse.errors).join(' '))
+      setErrorMessage('Error')
     } else {
-      history.push('/')
+      // history.push('/')
     }
   }
 
@@ -50,7 +92,12 @@ export function SignUpPage() {
           </Link>
           <h2>Sign Up</h2>
         </nav>
-
+        {/* <div className="file-drop-zone">
+          <div {...getRootProps()}>
+            <input {...getInputProps()} />
+            {dropZoneMessage}
+          </div> */}
+        {/* </div> */}
         <form onSubmit={handleFormSubmit}>
           {errorMessage && <p>{errorMessage}</p>}
           <p className="form-input">
@@ -73,13 +120,18 @@ export function SignUpPage() {
           </p>
           <p className="form-input">
             <label htmlFor="password">Password</label>
-            <input type="password" name="password" />
             <input
               type="password"
               name="password"
               value={newUser.password}
               onChange={handleStringFieldChange}
             />
+            {/* <input
+              type="password"
+              name="password"
+              value={newUser.password}
+              onChange={handleStringFieldChange}
+            /> */}
           </p>
           <p>
             <button type="submit" className="btn btn-info">

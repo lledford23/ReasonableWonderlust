@@ -12,6 +12,7 @@ import { ShowVacation } from './pages/ShowVacation'
 import { ToDoList } from './pages/ToDoList'
 import { LoginPage } from './pages/LoginPage'
 import { LoginRoutePage } from './pages/LoginRoutePage'
+import { UserAccountPage } from './pages/UserAccountPage'
 
 export function App() {
   return (
@@ -28,6 +29,9 @@ export function App() {
         </Route>
         <Route exact path="/LandingPage">
           <LandingPage />
+        </Route>
+        <Route exact path="/UserAccountPage">
+          <UserAccountPage />
         </Route>
         <Route exact path="/SignUpPage">
           <SignUpPage />
