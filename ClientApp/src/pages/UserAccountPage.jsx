@@ -39,7 +39,7 @@ export function UserAccountPage() {
       setErrorMessage(Object.values(apiResponse.errors).join(' '))
     } else {
       updateUserAuth(apiResponse)
-      window.location.assign('/')
+      window.location.assign('/LandingPage')
     }
   }
 

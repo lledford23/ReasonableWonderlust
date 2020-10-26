@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Link } from 'react-router-dom'
 import './Styles/custom.scss'
 
 import { AddNewVacation } from './pages/AddNewVacation'
@@ -13,6 +13,7 @@ import { ToDoList } from './pages/ToDoList'
 import { LoginPage } from './pages/LoginPage'
 import { LoginRoutePage } from './pages/LoginRoutePage'
 import { UserAccountPage } from './pages/UserAccountPage'
+import { isLoggedIn } from './auth'
 
 export function App() {
   return (

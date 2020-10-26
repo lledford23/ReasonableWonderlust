@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useHistory } from 'react-router-dom'
 import { NavBar } from '../components/NavBar'
+import { isLoggedIn, authHeader, getUser } from '../auth'
+import { formatDate } from '../dates'
 
 export function ShowPastVacations() {
+  const history = useHistory()
+  const user = getUser()
+
   const { id } = useParams()
 
   const [vacations, setVacations] = useState([
@@ -13,7 +18,6 @@ export function ShowPastVacations() {
       lastName: '',
       beginDate: '',
       endDate: '',
-      overallBudget: 0,
       activitiesBudget: 0,
       mealBudget: 0,
       travelBudget: 0,
@@ -34,6 +38,19 @@ export function ShowPastVacations() {
     loadVacations()
   }, [])
 
+  async function handleDelete(event) {
+    event.preventDefault()
+
+    const response = await fetch(`/api/vacations/${id}`, {
+      method: 'DELETE',
+      headers: { 'content-type': 'application/json', ...authHeader() },
+    })
+
+    if (response.status === 200 || response.status === 204) {
+      history.push('/LandingPage')
+    }
+  }
+
   return (
     <>
       <NavBar />
@@ -42,12 +59,18 @@ export function ShowPastVacations() {
       {vacations.map((vacation) => (
         <div key={vacation.id}>
           <h2>
-            <Link to={`/vacations/${vacation.id}`}>{vacation.beginDate}</Link>
+            <Link to={`/vacations/${vacation.id}`}>
+              {formatDate(vacation.beginDate)}
+            </Link>
           </h2>
+          {isLoggedIn() && vacation.userId === user.id && (
+            <button onClick={handleDelete}>Delete</button>
+          )}
+
           <p>
             <li>
-              Your vacation is set for dates: {vacation.beginDate} to{' '}
-              {vacation.endDate}
+              Your vacation is set for dates: {formatDate(vacation.beginDate)}{' '}
+              to {formatDate(vacation.endDate)}
             </li>
             <li>You have budgeted: {vacation.overallBudget}</li>
             <li>Your activities budget: {vacation.activitiesBudget}</li>

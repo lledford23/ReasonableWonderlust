@@ -2,9 +2,13 @@ import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 
 import { NavBar } from '../components/NavBar'
+import { getUser } from '../auth'
 
 export function AddNewVacation() {
   const history = useHistory()
+  const user = getUser()
+
+  console.log(user)
 
   const [newVacation, setNewVacation] = useState({
     id: 0,
@@ -59,7 +63,7 @@ export function AddNewVacation() {
 
     const json = await response.json()
 
-    // history.push('/')
+    history.push('/ToDoList')
   }
 
   return (

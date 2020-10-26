@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useHistory } from 'react-router-dom'
 import format from 'date-fns/format'
+import { getUser, authHeader, isLoggedIn } from '../auth'
+import { NavBar } from '../components/NavBar'
+import { formatDate } from '../dates'
 
 export function ShowVacation() {
+  const history = useHistory()
+  const user = getUser()
+
   const { id } = useParams()
 
   const [vacation, setVacation] = useState({
@@ -33,16 +39,32 @@ export function ShowVacation() {
     fetchVacation()
   }, [id])
 
-  const dataFormat = `EEEE, MMMM do, yyyy`
+  const dateFormat = `EEEE, MMMM do, yyyy`
 
+  async function handleDelete(event) {
+    event.preventDefault()
+
+    const response = await fetch(`/api/vacations/${id}`, {
+      method: 'DELETE',
+      headers: { 'content-type': 'application/json', ...authHeader() },
+    })
+
+    if (response.status === 200 || response.status === 204) {
+      history.push('/LandingPage')
+    }
+  }
   return (
     <>
+      <NavBar />
       <header>Show Vacation</header>
       <h2>
         <Link to={`/vacations/${vacation.id}`}>
-          {vacation.beginDate} to {vacation.endDate}
+          {formatDate(vacation.beginDate)} to {formatDate(vacation.endDate)}
         </Link>
       </h2>
+      {isLoggedIn() && vacation.userId === user.id && (
+        <button onClick={handleDelete}>Delete</button>
+      )}
       <p>
         <li>You have budgeted: {vacation.overallBudget}</li>
         <li>Your activities budget: {vacation.activitiesBudget}</li>
