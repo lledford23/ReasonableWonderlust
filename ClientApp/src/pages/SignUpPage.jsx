@@ -92,12 +92,6 @@ export function SignUpPage() {
           </Link>
           <h2>Sign Up</h2>
         </nav>
-        {/* <div className="file-drop-zone">
-          <div {...getRootProps()}>
-            <input {...getInputProps()} />
-            {dropZoneMessage}
-          </div> */}
-        {/* </div> */}
         <form onSubmit={handleFormSubmit}>
           {errorMessage && <p>{errorMessage}</p>}
           <p className="form-input">
@@ -126,12 +120,6 @@ export function SignUpPage() {
               value={newUser.password}
               onChange={handleStringFieldChange}
             />
-            {/* <input
-              type="password"
-              name="password"
-              value={newUser.password}
-              onChange={handleStringFieldChange}
-            /> */}
           </p>
           <p>
             <button type="submit" className="btn btn-info">

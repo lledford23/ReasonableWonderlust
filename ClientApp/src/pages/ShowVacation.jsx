@@ -56,15 +56,19 @@ export function ShowVacation() {
   return (
     <>
       <NavBar />
+      <Link to="/vacations">
+        <button type="button" className="btn btn-info">
+          Back to Past Vacations
+        </button>
+      </Link>
       <header>Show Vacation</header>
       <h2>
-        <Link to={`/vacations/${vacation.id}`}>
-          {formatDate(vacation.beginDate)} to {formatDate(vacation.endDate)}
-        </Link>
+        {formatDate(vacation.beginDate)} to {formatDate(vacation.endDate)}
       </h2>
-      {isLoggedIn() && vacation.userId === user.id && (
-        <button onClick={handleDelete}>Delete</button>
-      )}
+
+      <button type="button" className="btn btn-info" onClick={handleDelete}>
+        Delete
+      </button>
       <p>
         <li>You have budgeted: {vacation.overallBudget}</li>
         <li>Your activities budget: {vacation.activitiesBudget}</li>
