@@ -9,7 +9,7 @@ export function UserAccountPage() {
   const user = getUser()
 
   console.log(user.id)
-  const [errorMessage, setErrorMessage] = useState()
+  const [errorMessage, setErrorMessage] = useState('')
   const [updatedUser, setUpdatedUser] = useState({
     id: user.id,
     fullName: user.fullName,
