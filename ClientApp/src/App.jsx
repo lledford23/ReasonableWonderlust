@@ -14,6 +14,7 @@ import { LoginPage } from './pages/LoginPage'
 import { LoginRoutePage } from './pages/LoginRoutePage'
 import { UserAccountPage } from './pages/UserAccountPage'
 import { isLoggedIn } from './auth'
+import { EditVacation } from './pages/EditVacation'
 
 export function App() {
   return (
@@ -21,6 +22,9 @@ export function App() {
       <Switch>
         <Route exact path="/LoginPage">
           <LoginPage />
+        </Route>
+        <Route exact path="/vacations/:id.edit">
+          <EditVacation />
         </Route>
         <Route exact path="/">
           <LoginRoutePage />

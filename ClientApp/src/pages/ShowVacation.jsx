@@ -61,6 +61,14 @@ export function ShowVacation() {
           Back to Past Vacations
         </button>
       </Link>
+      {isLoggedIn() && vacation.userName === user.id && (
+        <p>
+          <Link className="button" to={`/vacations/${id}/edit`}>
+            Edit
+          </Link>
+        </p>
+      )}
+
       <header>Show Vacation</header>
       <h2>
         {formatDate(vacation.beginDate)} to {formatDate(vacation.endDate)}

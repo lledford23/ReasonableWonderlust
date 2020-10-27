@@ -1,0 +1,50 @@
+.edit-vacation {
+  // padding-top: 150px;
+  padding-bottom: 150px;
+  padding-right: 150px;
+  padding-left: 150px;
+
+  border: 20px solid $darkblue;
+
+  .form-group {
+    background-color: #dfebea;
+    color: $darkblue;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 8px;
+
+    border-radius: 5px;
+    input {
+      border: 1px solid $mediumblue;
+    }
+
+    select {
+      border-radius: 5px;
+      border: 1px solid $mediumblue;
+    }
+  }
+
+  input[type='text'] {
+    width: 25rem;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+  input[type='int'] {
+    width: 25rem;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+  input[type='date'] {
+    width: 25rem;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+}
