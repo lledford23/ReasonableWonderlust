@@ -5,9 +5,7 @@ namespace ReasonableWonderlust.Models
     public class Vacation
     {
         public int Id { get; set; }
-        public string UserName { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public int UserId { get; set; }
         public string Destination { get; set; }
         public DateTime BeginDate { get; set; }
         public DateTime EndDate { get; set; }

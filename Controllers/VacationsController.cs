@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -31,12 +33,32 @@ namespace ReasonableWonderlust.Controllers
         // Returns a list of all your Vacations
         //
         [HttpGet]
+        // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<Vacation>>> GetVacations()
         {
             // Uses the database context in `_context` to request all of the Vacations, sort
             // them by row id and return them as a JSON array.
+            // return await _context.Vacations.Where(vacation => vacation.UserId == GetCurrentUserId()).OrderBy(row => row.Id).ToListAsync();
             return await _context.Vacations.OrderBy(row => row.Id).ToListAsync();
         }
+        // Get: api/Vacations/user/id
+        [HttpGet("user/{userId}")]
+        public async Task<ActionResult<IEnumerable<Vacation>>> GetVacationByUserId(int userId)
+        {
+            // Find the vacation in the database using `FindAsync` to look it up by id
+            var vacation = await _context.Vacations.Where(vacation => vacation.UserId == userId).ToListAsync();
+
+            // If we didn't find anything, we receive a `null` in return
+            if (vacation == null)
+            {
+                // Return a `404` response to the client indicating we could not find a vacation with this id
+                return NotFound();
+            }
+
+            //  Return the vacation as a JSON object.
+            return vacation;
+        }
+
 
         // GET: api/Vacations/5
         //
@@ -172,6 +194,11 @@ namespace ReasonableWonderlust.Controllers
         private bool VacationExists(int id)
         {
             return _context.Vacations.Any(vacation => vacation.Id == id);
+        }
+        private int GetCurrentUserId()
+        {
+            // Get the User Id from the claim and then parse it as an integer.
+            return int.Parse(User.Claims.FirstOrDefault(claim => claim.Type == "Id").Value);
         }
     }
 }

@@ -13,9 +13,7 @@ export function ShowVacation() {
 
   const [vacation, setVacation] = useState({
     id: 0,
-    userName: '',
-    firstName: '',
-    lastName: '',
+    userId: '',
     beginDate: '',
     endDate: '',
     overallBudget: 0,
@@ -61,7 +59,7 @@ export function ShowVacation() {
           Back to Past Vacations
         </button>
       </Link>
-      {isLoggedIn() && vacation.userName === user.id && (
+      {isLoggedIn() && vacation.userId === user.id && (
         <p>
           <Link className="button" to={`/vacations/${id}/edit`}>
             Edit
