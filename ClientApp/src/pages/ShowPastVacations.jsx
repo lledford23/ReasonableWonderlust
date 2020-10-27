@@ -47,7 +47,7 @@ export function ShowPastVacations() {
     })
 
     if (response.status === 200 || response.status === 204) {
-      history.push('/LandingPage')
+      history.push('/LandingPage/vacations')
     }
   }
 

@@ -79,7 +79,7 @@ export function SignUpPage() {
       // setErrorMessage(Object.values(apiResponse.errors).join(' '))
       setErrorMessage('Error')
     } else {
-      // history.push('/')
+      history.push('/LoginPage')
     }
   }
 
