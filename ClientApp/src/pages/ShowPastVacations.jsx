@@ -13,9 +13,7 @@ export function ShowPastVacations() {
   const [vacations, setVacations] = useState([
     {
       id: 0,
-      userName: '',
-      firstName: '',
-      lastName: '',
+      userId: user.id,
       beginDate: '',
       endDate: '',
       activitiesBudget: 0,
@@ -28,11 +26,12 @@ export function ShowPastVacations() {
     },
   ])
 
+  console.log(vacations)
+
   useEffect(function () {
     async function loadVacations() {
-      const response = await fetch('/api/vacations')
+      const response = await fetch(`/api/Vacations/user/${user.id}`)
       const json = await response.json()
-
       setVacations(json)
     }
     loadVacations()

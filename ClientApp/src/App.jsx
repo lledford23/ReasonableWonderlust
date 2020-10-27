@@ -23,7 +23,7 @@ export function App() {
         <Route exact path="/LoginPage">
           <LoginPage />
         </Route>
-        <Route exact path="/vacations/:id.edit">
+        <Route exact path="/vacations/:id/edit">
           <EditVacation />
         </Route>
         <Route exact path="/">

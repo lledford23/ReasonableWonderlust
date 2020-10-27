@@ -60,21 +60,22 @@ export function ShowVacation() {
         </button>
       </Link>
       {isLoggedIn() && vacation.userId === user.id && (
-        <p>
-          <Link className="button" to={`/vacations/${id}/edit`}>
-            Edit
+        <>
+          <Link to={`/vacations/${id}/edit`}>
+            <button type="button" className="btn btn-info">
+              Edit
+            </button>
           </Link>
-        </p>
+          <button type="button" className="btn btn-info" onClick={handleDelete}>
+            Delete
+          </button>
+        </>
       )}
 
       <header>Show Vacation</header>
       <h2>
         {formatDate(vacation.beginDate)} to {formatDate(vacation.endDate)}
       </h2>
-
-      <button type="button" className="btn btn-info" onClick={handleDelete}>
-        Delete
-      </button>
       <p>
         <li>You have budgeted: {vacation.overallBudget}</li>
         <li>Your activities budget: {vacation.activitiesBudget}</li>
