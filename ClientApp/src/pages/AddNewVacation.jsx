@@ -69,6 +69,7 @@ export function AddNewVacation() {
   return (
     <>
       <NavBar />
+      <h1>Where are you wandering next?</h1>
       <section className="add-new-vacation-form">
         <form onSubmit={handleFormSubmit}>
           <div className="form-group">
