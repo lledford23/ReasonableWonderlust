@@ -54,35 +54,46 @@ export function ShowVacation() {
   return (
     <>
       <NavBar />
-      <Link to="/vacations">
-        <button type="button" className="btn btn-info">
-          Back to Vacations
-        </button>
-      </Link>
-      {isLoggedIn() && vacation.userId === user.id && (
-        <>
-          <Link to={`/vacations/${id}/edit`}>
+      <div className="showonevacation">
+        <div className="vacationonebuttons">
+          <Link to="/vacations">
             <button type="button" className="btn btn-info">
-              Edit
+              Back to Vacations
             </button>
           </Link>
-          <button type="button" className="btn btn-info" onClick={handleDelete}>
-            Delete
-          </button>
-        </>
-      )}
-
-      <header>Show Vacation</header>
-      <h2>
-        {formatDate(vacation.beginDate)} to {formatDate(vacation.endDate)}
-      </h2>
-      <p>
-        <li>You have budgeted: {vacation.overallBudget}</li>
-        <li>Your activities budget: {vacation.activitiesBudget}</li>
-        <li>Your meal budget: {vacation.mealBudget}</li>
-        <li>Your travel budget: {vacation.travelBudget}</li>
-        <li>Your accommodations budget: {vacation.accommodationsBudget}</li>
-      </p>
+          {isLoggedIn() && vacation.userId === user.id && (
+            <>
+              <Link to={`/vacations/${id}/edit`}>
+                <button type="button" className="btn btn-info">
+                  Edit
+                </button>
+              </Link>
+              <Link to="/LandingPage">
+                <button
+                  type="button"
+                  className="btn btn-info"
+                  onClick={handleDelete}
+                >
+                  Delete
+                </button>
+              </Link>
+            </>
+          )}
+        </div>
+        <div className="actualvacation">
+          <header>Show Vacation</header>
+          <h2>
+            {formatDate(vacation.beginDate)} to {formatDate(vacation.endDate)}
+          </h2>
+          <p>
+            <li>You have budgeted: {vacation.overallBudget}</li>
+            <li>Your activities budget: {vacation.activitiesBudget}</li>
+            <li>Your meal budget: {vacation.mealBudget}</li>
+            <li>Your travel budget: {vacation.travelBudget}</li>
+            <li>Your accommodations budget: {vacation.accommodationsBudget}</li>
+          </p>
+        </div>
+      </div>
     </>
   )
 }

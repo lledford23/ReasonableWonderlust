@@ -53,28 +53,32 @@ export function ShowPastVacations() {
   return (
     <>
       <NavBar />
-      <header>Vacations</header>
+      <div className="showallvacations">
+        <header>Vacations</header>
 
-      {vacations.map((vacation) => (
-        <div key={vacation.id}>
-          <h2>
-            <Link to={`/vacations/${vacation.id}`}>
-              {formatDate(vacation.beginDate)}
-            </Link>
-          </h2>
-          <p>
-            <li>
-              Your vacation is set for dates: {formatDate(vacation.beginDate)}{' '}
-              to {formatDate(vacation.endDate)}
-            </li>
-            <li>You have budgeted: {vacation.overallBudget}</li>
-            <li>Your activities budget: {vacation.activitiesBudget}</li>
-            <li>Your meal budget: {vacation.mealBudget}</li>
-            <li>Your travel budget: {vacation.travelBudget}</li>
-            <li>Your accommodations budget: {vacation.accommodationsBudget}</li>
-          </p>
-        </div>
-      ))}
+        {vacations.map((vacation) => (
+          <div key={vacation.id}>
+            <h2>
+              <Link to={`/vacations/${vacation.id}`}>
+                {formatDate(vacation.beginDate)}
+              </Link>
+            </h2>
+            <p>
+              <li>
+                Your vacation is set for dates: {formatDate(vacation.beginDate)}{' '}
+                to {formatDate(vacation.endDate)}
+              </li>
+              <li>You have budgeted: {vacation.overallBudget}</li>
+              <li>Your activities budget: {vacation.activitiesBudget}</li>
+              <li>Your meal budget: {vacation.mealBudget}</li>
+              <li>Your travel budget: {vacation.travelBudget}</li>
+              <li>
+                Your accommodations budget: {vacation.accommodationsBudget}
+              </li>
+            </p>
+          </div>
+        ))}
+      </div>
     </>
   )
 }

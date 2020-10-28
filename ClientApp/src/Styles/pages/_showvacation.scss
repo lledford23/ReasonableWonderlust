@@ -1,0 +1,25 @@
+.showonevacation {
+  height: calc(100vh - 90px);
+
+  border: 20px solid $darkblue;
+
+  .vacationonebuttons {
+    display: flex;
+
+    a {
+      margin: 8px;
+    }
+    > button {
+      padding: 0;
+    }
+  }
+  .actualvacation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+  }
+}

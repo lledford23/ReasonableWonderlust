@@ -1,0 +1,10 @@
+.showallvacations {
+  height: calc(100vh - 90px);
+
+  border: 20px solid $darkblue;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
