@@ -2,11 +2,13 @@ import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 
 import { NavBar } from '../components/NavBar'
-import { getUser } from '../auth'
+import { getUser, authHeader } from '../auth'
 
 export function AddNewVacation() {
   const history = useHistory()
   const user = getUser()
+
+  const [errorMessage, setErrorMessage] = useState()
 
   console.log(user)
 
@@ -57,13 +59,21 @@ export function AddNewVacation() {
 
     const response = await fetch('/api/Vacations', {
       method: 'POST',
-      headers: { 'content-type': 'application/json' },
+      headers: { 'content-type': 'application/json', ...authHeader() },
       body: JSON.stringify(newVacation),
     })
 
-    const json = await response.json()
+    if (response.status === 401) {
+      setErrorMessage('Not Authorized')
+    } else {
+      if (response.status === 400) {
+        const json = await response.json()
 
-    history.push('/ToDoList')
+        setErrorMessage(Object.values(json.errors).join(''))
+      } else {
+        history.push('/ToDoList')
+      }
+    }
   }
 
   return (

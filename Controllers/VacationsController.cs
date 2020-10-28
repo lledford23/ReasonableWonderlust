@@ -38,8 +38,8 @@ namespace ReasonableWonderlust.Controllers
         {
             // Uses the database context in `_context` to request all of the Vacations, sort
             // them by row id and return them as a JSON array.
-            // return await _context.Vacations.Where(vacation => vacation.UserId == GetCurrentUserId()).OrderBy(row => row.Id).ToListAsync();
-            return await _context.Vacations.OrderBy(row => row.Id).ToListAsync();
+            return await _context.Vacations.Where(vacation => vacation.UserId == GetCurrentUserId()).OrderBy(row => row.Id).ToListAsync();
+            // return await _context.Vacations.OrderBy(row => row.Id).ToListAsync();
         }
         // Get: api/Vacations/user/id
         [HttpGet("user/{userId}")]
@@ -148,8 +148,10 @@ namespace ReasonableWonderlust.Controllers
         // new values for the record.
         //
         [HttpPost]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<Vacation>> PostVacation(Vacation vacation)
         {
+            vacation.UserId = GetCurrentUserId();
             // Indicate to the database context we want to add this new record
             _context.Vacations.Add(vacation);
             await _context.SaveChangesAsync();

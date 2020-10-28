@@ -56,7 +56,7 @@ export function ShowVacation() {
       <NavBar />
       <Link to="/vacations">
         <button type="button" className="btn btn-info">
-          Back to Past Vacations
+          Back to Vacations
         </button>
       </Link>
       {isLoggedIn() && vacation.userId === user.id && (

@@ -1,0 +1,38 @@
+.accountpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  // border: 20px solid $darkblue;
+
+  h2 {
+    border-radius: 5px;
+    color: white;
+
+    border: 1px solid $mediumblue;
+    background-color: rgb(19, 132, 150);
+
+    padding-left: 33px;
+    padding-right: 33px;
+    padding-bottom: 4px;
+
+    // border: 20px solid $darkblue;
+  }
+  .form-input {
+    border-radius: 5px;
+    color: $darkblue;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #dfebea;
+
+    padding: 8px;
+
+    input {
+      border: 1px solid $darkblue;
+    }
+  }
+}
