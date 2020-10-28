@@ -42,8 +42,8 @@ export function UserAccountPage() {
 
   return (
     <>
+      <NavBar />
       <section className="accountpage">
-        <NavBar />
         <div className="accountbody">
           <h2>Edit Profile</h2>
           <form onSubmit={handleFormSubmit}>

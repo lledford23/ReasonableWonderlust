@@ -9,10 +9,10 @@ export function LandingPage() {
         <div>
           <h1>Reasonable Wanderlust</h1>
         </div>
-      </div>
 
-      <div className="tagline">
-        <h2>Curate where you'll wander next, reasonably.</h2>
+        <div className="tagline">
+          <h2>Curate where you'll wander next, reasonably.</h2>
+        </div>
       </div>
     </>
   )

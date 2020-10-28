@@ -2,12 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-
   position: sticky;
   top: 0;
-
-  width: 100vw;
 
   background-image: url(../../images/headerBackground.jpg);
   background-size: cover;
@@ -22,9 +18,14 @@
   }
 
   .navItems {
-    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+
+    a,
+    button {
+      margin: 16px 16px;
+    }
   }
 
   .topNav ul {
@@ -37,15 +38,18 @@
   }
 
   .welcome {
-    border: 2px solid $mediumblue;
-    background-color: $grey;
+    background-color: #17a2b8;
 
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px;
+
+    margin-left: 16px;
 
     border-radius: 5px;
 
-    color: $darkblue;
+    color: white;
+
+    p {
+      margin: 0;
+    }
   }
 }

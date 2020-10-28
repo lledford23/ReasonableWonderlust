@@ -14,10 +14,10 @@ export function NavBar() {
   return (
     <>
       <nav className="topNav navbar-light">
+        <div className="welcome">
+          {isLoggedIn() && <p>Welcome back, {user.fullName}!</p>}
+        </div>
         <div className="navItems">
-          <div className="welcome">
-            {isLoggedIn() && <p>Welcome back, {user.fullName}!</p>}
-          </div>
           <Link to="/add_new_vacation">
             <button type="button" className="btn btn-info">
               New Vacation
@@ -39,17 +39,15 @@ export function NavBar() {
               Account Page
             </button>
           </Link>
-          <div className="sign-out">
-            {isLoggedIn() && (
-              <button
-                onClick={handleLogout}
-                type="button"
-                className="btn btn-info"
-              >
-                Sign out
-              </button>
-            )}
-          </div>
+          {isLoggedIn() && (
+            <button
+              onClick={handleLogout}
+              type="button"
+              className="btn btn-info"
+            >
+              Sign out
+            </button>
+          )}
         </div>
       </nav>
     </>
