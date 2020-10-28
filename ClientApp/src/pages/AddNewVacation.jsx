@@ -10,7 +10,7 @@ export function AddNewVacation() {
 
   const [errorMessage, setErrorMessage] = useState()
 
-  console.log(user)
+  // console.log(user)
 
   const [newVacation, setNewVacation] = useState({
     id: 0,
@@ -56,7 +56,7 @@ export function AddNewVacation() {
 
   async function handleFormSubmit(event) {
     event.preventDefault()
-
+    console.log(newVacation)
     const response = await fetch('/api/Vacations', {
       method: 'POST',
       headers: { 'content-type': 'application/json', ...authHeader() },
@@ -71,7 +71,7 @@ export function AddNewVacation() {
 
         setErrorMessage(Object.values(json.errors).join(''))
       } else {
-        history.push('/ToDoList')
+        history.push(`/VacationToDoList/${user.id}`)
       }
     }
   }

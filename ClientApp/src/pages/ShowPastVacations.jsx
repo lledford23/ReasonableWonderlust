@@ -46,7 +46,7 @@ export function ShowPastVacations() {
     })
 
     if (response.status === 200 || response.status === 204) {
-      history.push('/LandingPage/vacations')
+      history.push('/vacations')
     }
   }
 
@@ -62,10 +62,6 @@ export function ShowPastVacations() {
               {formatDate(vacation.beginDate)}
             </Link>
           </h2>
-          {isLoggedIn() && vacation.userId === user.id && (
-            <button onClick={handleDelete}>Delete</button>
-          )}
-
           <p>
             <li>
               Your vacation is set for dates: {formatDate(vacation.beginDate)}{' '}

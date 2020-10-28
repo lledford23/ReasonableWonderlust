@@ -3,23 +3,23 @@ import { NavBar } from '../components/NavBar'
 import { useHistory, useParams } from 'react-router-dom'
 import { getUser } from '../auth'
 
-export function ToDoList() {
+export function VacationToDoList() {
   const history = useHistory()
   const user = getUser()
 
   const { id } = useParams()
 
-  const [todolist, setToDoList] = useState({})
+  const [vacationtodolist, setVacationToDoList] = useState({})
 
   useEffect(() => {
     const fetchToDoList = async () => {
-      const response = await fetch(`/api/ToDoList/`)
+      const response = await fetch(`/api/ToDoList/${id}`)
       const apiData = await response.json()
 
-      setToDoList(apiData)
+      setVacationToDoList(apiData)
     }
     fetchToDoList()
-    console.log(todolist)
+    console.log(vacationtodolist)
   }, [id])
 
   console.log(id)

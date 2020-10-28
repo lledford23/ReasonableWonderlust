@@ -11,7 +11,7 @@ export function EditVacation() {
 
   const [errorMessage, setErrorMessage] = useState()
 
-  const [vacation, setVacation] = useState({
+  const [vacation, setUpdateVacation] = useState({
     id: 0,
     userName: '',
     firstName: '',
@@ -36,7 +36,7 @@ export function EditVacation() {
 
     const updatedVacation = { ...vacation, [fieldName]: value }
 
-    setVacation(updatedVacation)
+    setUpdateVacation(updatedVacation)
   }
 
   function handleIntChange(event) {
@@ -48,7 +48,7 @@ export function EditVacation() {
       [fieldName]: parseInt(value),
     }
 
-    setVacation(updatedVacation)
+    setUpdateVacation(updatedVacation)
 
     console.log(event.target.value)
   }
@@ -61,13 +61,13 @@ export function EditVacation() {
     const response = await fetch(`/api/Vacations/${id}`)
     const apiData = await response.json()
 
-    setVacation(apiData)
+    setUpdateVacation(apiData)
   }
 
   async function handleFormSubmit(event) {
     event.preventDefault()
 
-    const response = await fetch('/api/Vacations', {
+    const response = await fetch(`/api/Vacations/${id}`, {
       method: 'PUT',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(vacation),
@@ -81,7 +81,7 @@ export function EditVacation() {
 
         setErrorMessage(Object.values(json.errors).join(''))
       } else {
-        history.push('/ToDoList')
+        history.push('/vacations')
       }
     }
   }

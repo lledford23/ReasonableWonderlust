@@ -21,6 +21,6 @@ namespace ReasonableWonderlust.Models
         public string NotesNewVacation { get; set; }
 
         // A Vacation has many to dos
-        public List<reasonablewonderlust.Models.ToDoList> ToDoLists { get; set; }
+        public List<ToDoList> ToDoLists { get; set; }
     }
 }

@@ -15,6 +15,7 @@ import { LoginRoutePage } from './pages/LoginRoutePage'
 import { UserAccountPage } from './pages/UserAccountPage'
 import { isLoggedIn } from './auth'
 import { EditVacation } from './pages/EditVacation'
+import { VacationToDoList } from './pages/VacationToDoList'
 
 export function App() {
   return (
@@ -44,8 +45,12 @@ export function App() {
         <Route exact path="/add_new_vacation">
           <AddNewVacation />
         </Route>
+        {/* prob need to delete */}
         <Route exact path="/ToDoList">
           <ToDoList />
+        </Route>
+        <Route exact path="/VacationToDoList/:id">
+          <VacationToDoList />
         </Route>
         <Route exact path="/vacations">
           <ShowPastVacations />

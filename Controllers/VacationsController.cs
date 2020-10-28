@@ -95,6 +95,7 @@ namespace ReasonableWonderlust.Controllers
         // new values for the record.
         //
         [HttpPut("{id}")]
+        // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> PutVacation(int id, Vacation vacation)
         {
             // If the ID in the URL does not match the ID in the supplied request body, return a bad request

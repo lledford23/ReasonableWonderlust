@@ -1,6 +1,6 @@
 using System;
 
-namespace reasonablewonderlust.Models
+namespace ReasonableWonderlust.Models
 {
     public class ToDoList
     {
@@ -8,5 +8,6 @@ namespace reasonablewonderlust.Models
         public string ListItem { get; set; }
         public DateTime CreatedAt { get; set; }
         public int VacationId { get; set; }
+        public Vacation Vacation { get; set; }
     }
 }
