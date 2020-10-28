@@ -33,7 +33,7 @@ namespace ReasonableWonderlust.Controllers
         // Returns a list of all your Vacations
         //
         [HttpGet]
-        // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<Vacation>>> GetVacations()
         {
             // Uses the database context in `_context` to request all of the Vacations, sort

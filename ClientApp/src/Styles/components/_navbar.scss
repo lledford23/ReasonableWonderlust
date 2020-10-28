@@ -35,4 +35,17 @@
     display: flex;
     align-items: center;
   }
+
+  .welcome {
+    border: 2px solid $mediumblue;
+    background-color: $grey;
+
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    border-radius: 5px;
+
+    color: $darkblue;
+  }
 }

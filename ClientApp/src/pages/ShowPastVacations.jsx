@@ -53,7 +53,7 @@ export function ShowPastVacations() {
   return (
     <>
       <NavBar />
-      <header>Past Vacations</header>
+      <header>Vacations</header>
 
       {vacations.map((vacation) => (
         <div key={vacation.id}>
