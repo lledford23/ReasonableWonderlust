@@ -16,6 +16,7 @@ namespace ReasonableWonderlust.Models
         // Add database tables here
         public DbSet<Vacation> Vacations { get; set; }
         public DbSet<VacationDetail> VacationDetails { get; set; }
+        public DbSet<reasonablewonderlust.Models.ToDoList> ToDoLists { get; set; }
 
         public DbSet<User> Users { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

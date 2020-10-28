@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace ReasonableWonderlust.Models
 {
@@ -18,5 +19,8 @@ namespace ReasonableWonderlust.Models
         public string TravelMethod { get; set; }
         public string AccommodationsMethod { get; set; }
         public string NotesNewVacation { get; set; }
+
+        // A Vacation has many to dos
+        public List<reasonablewonderlust.Models.ToDoList> ToDoLists { get; set; }
     }
 }
