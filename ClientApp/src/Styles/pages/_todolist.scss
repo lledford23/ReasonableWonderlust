@@ -1,21 +1,38 @@
-// padding-bottom: 150px;
-// padding-right: 150px;
-// padding-left: 150px;
+.stupidParent {
+  height: calc(100vh - 90px);
 
-// border: 20px solid $darkblue;
-
-// background-color: #dfebea;
-// color: $darkblue;
-
-.header {
-  box-sizing: border-box;
   border: 20px solid $darkblue;
 
-  padding: 30px 40px;
-  text-align: center;
-}
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-.myList {
-  margin: 0;
-  padding: 0;
+  .vacationDropDown {
+    box-sizing: border-box;
+
+    flex-direction: column;
+
+    padding: 30px 40px;
+    text-align: center;
+  }
+
+  h2 {
+    margin-top: 85px;
+  }
+  button {
+    width: 100px;
+  }
+
+  input[type='text'] {
+    width: 25rem;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+  ol,
+  ul {
+    margin: 0;
+    padding: 0;
+  }
 }
