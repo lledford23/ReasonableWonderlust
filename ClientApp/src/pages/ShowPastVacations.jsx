@@ -67,6 +67,7 @@ export function ShowPastVacations() {
                 Your vacation is set for dates: {formatDate(vacation.beginDate)}{' '}
                 to {formatDate(vacation.endDate)}
               </li>
+              <li>You are traveling to: {vacation.destination}</li>
               <li>You have budgeted: {vacation.overallBudget}</li>
               <li>Your activities budget: {vacation.activitiesBudget}</li>
               <li>Your meal budget: {vacation.mealBudget}</li>

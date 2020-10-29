@@ -14,6 +14,7 @@ export function ShowVacation() {
   const [vacation, setVacation] = useState({
     id: 0,
     userId: '',
+    destination: '',
     beginDate: '',
     endDate: '',
     overallBudget: 0,
@@ -86,6 +87,7 @@ export function ShowVacation() {
             {formatDate(vacation.beginDate)} to {formatDate(vacation.endDate)}
           </h2>
           <p>
+            <li>You are traveling to: {vacation.destination}</li>
             <li>You have budgeted: {vacation.overallBudget}</li>
             <li>Your activities budget: {vacation.activitiesBudget}</li>
             <li>Your meal budget: {vacation.mealBudget}</li>

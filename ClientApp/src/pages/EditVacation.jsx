@@ -95,6 +95,7 @@ export function EditVacation() {
       <NavBar />
       <div className="edit-vacation">
         <form onSubmit={handleFormSubmit}>
+          <h1>Edit Your Vacation</h1>
           <div className="form-group">
             <label htmlFor="place">Place you are traveling to?</label>
             <input
