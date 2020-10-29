@@ -54,8 +54,7 @@ export function ShowPastVacations() {
     <>
       <NavBar />
       <div className="showallvacations">
-        <header>Vacations</header>
-
+        <h1>Vacations</h1>
         {vacations.map((vacation) => (
           <div key={vacation.id}>
             <h2>

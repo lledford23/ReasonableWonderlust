@@ -81,7 +81,7 @@ export function ShowVacation() {
           )}
         </div>
         <div className="actualvacation">
-          <header>Show Vacation</header>
+          <h1>Current Vacation</h1>
           <h2>
             {formatDate(vacation.beginDate)} to {formatDate(vacation.endDate)}
           </h2>
