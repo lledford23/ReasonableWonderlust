@@ -71,7 +71,7 @@ export function AddNewVacation() {
 
         setErrorMessage(Object.values(json.errors).join(''))
       } else {
-        history.push(`/VacationToDoList/${user.id}`)
+        history.push(`/ToDoList/`)
       }
     }
   }

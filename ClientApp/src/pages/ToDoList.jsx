@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { NavBar } from '../components/NavBar'
 import { useHistory, useParams } from 'react-router-dom'
-import { getUser } from '../auth'
+import { getUser, authHeader } from '../auth'
+import { formatDate } from '../dates'
 
 export function ToDoList() {
   const history = useHistory()
@@ -11,22 +12,66 @@ export function ToDoList() {
 
   const [todolist, setToDoList] = useState({})
 
+  const [allVacations, setAllVacations] = useState([])
+
+  const [vacationId, setVacationId] = useState([])
+
+  function handleStringFieldChange(event) {
+    const value = event.target.value
+    setVacationId(value)
+  }
+
   useEffect(() => {
     const fetchToDoList = async () => {
-      const response = await fetch(`/api/ToDoList/`)
+      const response = await fetch(`/api/ToDoList/${vacationId}`)
       const apiData = await response.json()
 
       setToDoList(apiData)
     }
     fetchToDoList()
-    console.log(todolist)
   }, [id])
 
-  console.log(id)
+  useEffect(() => {
+    const fetchAllVacations = async () => {
+      const response = await fetch('/api/Vacations/', {
+        headers: { 'content-type': 'application/json', ...authHeader() },
+      })
+      const apiData = await response.json()
+
+      setAllVacations(apiData)
+      console.log(apiData)
+    }
+    fetchAllVacations()
+  }, [])
 
   return (
     <>
       <NavBar />
+      <h1>Which vacation are we adding to?</h1>
+      <select
+        name="vacationDropDown"
+        onChange={handleStringFieldChange}
+        required
+      >
+        {allVacations ? (
+          allVacations.map((vacation, key) => {
+            return (
+              <option value={vacation.id}>
+                {formatDate(vacation.beginDate)}
+              </option>
+            )
+          })
+        ) : (
+          // <>
+          //   <option
+          //     placeholder="Pick your vacation"
+          //     value="UserVacations"
+          //   ></option>
+          // </>
+          <></>
+        )}
+      </select>
+
       <div id="myToDo" className="header">
         <h2>My To Do List</h2>
         <input type="text" id="myInput" placeholder="Add New Item.." />
